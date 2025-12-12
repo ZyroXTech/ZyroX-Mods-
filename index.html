@@ -13,7 +13,7 @@
 
     <!-- Header -->
     <header>
-        <h1>ZyroX Mods</h1>
+        <h1><a href="index.html" class="logo">ZyroX Mods</a></h1>
         <div class="menu-icon" id="menu-icon">
             <div></div>
             <div></div>
@@ -26,7 +26,11 @@
         <a href="index.html">Home</a>
         <a href="Premium.html">Premium Apps</a>
         <a href="Contact.html">Contact</a>
+         <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="dark-mode-btn">🌙 Dark Mode</button>
     </nav>
+    
+    
 
     <!-- Main Content -->
     <main>
@@ -35,20 +39,28 @@
             <p>Download latest APKs and mods here!</p>
         </div>
 
-        <!-- APK Card -->
-        <div class="game-card">
-            <h3>Mob Control</h3>
-            <p>Version: 2.92.0 (64-bit)</p>
-            <p>Unlocked Features & Mod Menu</p>
-            <button onclick="window.location.href='mobcontrol.html'">View APK</button>
-        </div>
-          <!-- APK Card -->
-        <div class="game-card">
-            <h3>Bowmasters</h3>
-            <p>Version: 2.92.0 (64-bit)</p>
-            <p>Unlocked Features & Mod Menu</p>
-            <button onclick="window.location.href='Bowmasters.html'">View APK</button>
-        </div>
+       <!-- APK Card -->
+<div class="game-card game-card-left">
+    <div class="game-img">
+        <img src="Mob.png" alt="Mob Control Game">
+    </div>
+    <div class="game-info">
+        <h3>Mob Control</h3>
+        <p>Version: 2.92.0 (64-bit)</p>
+        <button onclick="window.location.href='mobcontrol.html'">View APK</button>
+    </div>
+</div>
+            <!-- APK Card -->
+   <div class="game-card game-card-left">
+       <div class="game-img">
+           <img src="Bow.png" alt="Mob Control Game">
+       </div>
+       <div class="game-info">
+           <h3>Bowmasters</h3>
+           <p>Version: 2.92.0 (64-bit)</p>
+           <button onclick="window.location.href='Bowmasters.html'">View APK</button>
+       </div>
+   </div>
          <!-- Premium Card -->
         <div class="game-card">
             <h3>Premium Features</h3>
@@ -77,26 +89,7 @@
 <audio id="bg-music" src="ncs.mp3" loop autoplay></audio>
 <button class="music-btn" onclick="toggleMusic()">PlayMusic</button>
 
-    <script>
-        const menuIcon = document.getElementById('menu-icon');
-        const sidebar = document.getElementById('sidebar');
-
-        menuIcon.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-        /*musi code*/
-        function toggleMusic() {
-    const music = document.getElementById('bg-music');
-    const btn = document.querySelector('.music-btn');
-    if (music.paused) {
-        music.play();
-        btn.textContent = 'Pause Music';
-    } else {
-        music.pause();
-        btn.textContent = 'Play Music';
-    }
-}
-    </script>
-
+<!-- Link to external JS -->
+<script src="main.js"></script>
 </body>
 </html>
