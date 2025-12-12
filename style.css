@@ -142,6 +142,72 @@ main {
     background: #475569;
 }
 
+/* ===== Game Card Base ===== */
+.game-card-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    flex-direction: row; /* default: image left, info right */
+}
+
+/* Image Bottom - Image info ko tala */
+.game-card-left.image-bottom {
+    flex-direction: column-reverse; /* image tala, info mathi */
+    align-items: center;
+    text-align: center;
+}
+
+/* Image Middle - Image info ko bichma */
+.game-card-left.image-middle {
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
+    text-align: center;
+}
+
+/* Image style */
+.game-card-left .game-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 7px 0; /* middle/bottom adjust garna */
+}
+
+/* Info style */
+.game-card-left .game-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card-left .game-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.game-card-left .game-info p {
+    margin: 3px 0;
+    font-size: 0.85rem;
+}
+
+.game-card-left .game-info button {
+    align-self: flex-start;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    background: #334155;
+    color: #f8fafc;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.game-card-left .game-info button:hover {
+    background: #475569;
+}
+
 .sidebar {
   position: fixed;
   top: 60px;          
@@ -165,7 +231,37 @@ main {
   opacity: 1;         /* fade in */
 }
 
+/* Dark Mode Button inside Sidebar */
+.dark-mode-btn {
+    width: 90%;
+    margin: 20px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 370px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* purple to blue gradient */
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
+/* Hover Effect */
+.dark-mode-btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb); /* reverse gradient */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Active/Click Effect */
+.dark-mode-btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
 
 /* --- Prevent scroll --- */
 html, body {
@@ -345,6 +441,15 @@ footer {
   font-weight: 600;
   margin: 8px 0 0;
 }
+/*logo click to open home code */
+.logo {
+    color: #fff; /* text color */
+    text-decoration: none; /* underline hatauna */
+}
+.logo:hover {
+    color: #9B30FF; /* hover ma color change */
+    cursor: pointer;
+}
 
 /* Footer */
 footer {
@@ -384,3 +489,65 @@ footer p {
     font-size: 14px;
     color: #cbd5e1;
 }
+
+/* === DARK MODE STYLES === */
+body.dark-mode {
+    background: #0b1120;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: #111827;
+}
+
+body.dark-mode main {
+    background: linear-gradient(135deg, #0b1120, #111827);
+}
+
+body.dark-mode .sidebar {
+    background: #111827;
+}
+
+body.dark-mode .sidebar a {
+    color: #ffffff;
+}
+
+body.dark-mode .sidebar a:hover {
+    background-color: #1f2937;
+}
+
+body.dark-mode .welcome-box,
+body.dark-mode .game-card {
+    background: #111827;
+    color: #f8fafc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .game-card button {
+    background: #1f2937;
+    color: #f8fafc;
+}
+
+body.dark-mode .game-card button:hover {
+    background: #374151;
+}
+
+body.dark-mode .dark-mode-btn {
+    background-color: #333;
+    color: #fff;
+    border-color: #888;
+}
+
+body.dark-mode footer {
+    background: #111827;
+    color: #cbd5e1;
+}
+
+body.dark-mode .footer-icons a {
+    background: #1f2937;
+    color: #f8fafc;
+}
+
+body.dark-mode .footer-icons a:hover {
+    background: #374151;
+    }}
