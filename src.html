@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZyroX Mods - Source</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>ZyroX Mods - Source</h1>
+        <div class="menu-icon" id="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <a href="src.html">Home</a>
+        <a href="Premium.html">Premium</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="welcome-box">
+            <h2>Welcome to ZyroX Mods Source Page</h2>
+            <p>Explore all APKs, mods, and premium features from here!</p>
+        </div>
+
+        <!-- APK Card -->
+        <div class="game-card">
+            <h3>Mob Control</h3>
+            <p>Version: 2.92.0 (64-bit)</p>
+            <p>Unlocked Features & Mod Menu</p>
+            <button onclick="window.location.href='mobcontrol.html'">View APK</button>
+        </div>
+
+        <!-- Premium Card -->
+        <div class="game-card">
+            <h3>Premium Features</h3>
+            <p>Access all exclusive mods</p>
+            <button onclick="window.location.href='Premium.html'">Go Premium</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ZyroX Mods</p>
+        <div class="footer-icons">
+            <a href="https://instagram.com/yourprofile" target="_blank" class="icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/yourchannel" target="_blank" class="icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://t.me/yourtelegram" target="_blank" class="icon">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.getElementById('sidebar');
+
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
